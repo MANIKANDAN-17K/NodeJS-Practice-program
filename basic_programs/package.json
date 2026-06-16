@@ -1,0 +1,17 @@
+{
+  "name": "basic_programs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ServerCreation.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
