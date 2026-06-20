@@ -67,10 +67,31 @@ const deleteStudent = (req, res) => {
         student: deleteStudent[0]
     });
 };
+const StudentGetById = (req,res,next) => {
+    try{
+        const id = parseInt(req.params.id);
+        const student = students.find(
+            s => s.id === id
+        );
+        if(!student){
+            const error = new Error("Student not found");
+            error.statusCode = 404;
+
+            return next(error);
+        }
+        res.status(200).json({
+            message: 'Student retrieved successfully',
+            student: student
+        });
+    }catch(err){
+        next(err);
+    }
+}
 
 module.exports = {
     registerStudent,
     updateStudent,
     updateStudentPartial,
-    deleteStudent
+    deleteStudent,
+    StudentGetById
 }
