@@ -1,5 +1,7 @@
 const express = require('express');
 const db = require('./config/db');
+const dotenv = require('dotenv');
+dotenv.config();
 const app = express();
 const StudentRoutes = require('./routes/studentRoutes');
 const errorHandler = require('./middleware/errorHandler');
